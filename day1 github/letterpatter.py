@@ -8,7 +8,6 @@ while(letter<='g'):
     previous=previous+letter+previous
     #increament the letter
     letter=chr(ord(letter)+1)
-    #print
     print(previous)
     
     

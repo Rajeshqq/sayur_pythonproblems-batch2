@@ -1,6 +1,6 @@
 #import the collection package
 import collections
-#example hardcore value
+#example hardcode value
 name = ["rajesh", "siva", "malkkar", "nithish", "vasanth", "kaveri"]
 mark = [55, 45, 65, 34, 78, 66]
 #intilize the an list and failcount is 0

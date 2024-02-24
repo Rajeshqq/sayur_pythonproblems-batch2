@@ -6,7 +6,6 @@
 #Ability to run promotion and give discount
 #nteractive with user - get inputs, print results`
 foodItemsCost = {'idly':5,'dosa':10,'poori':20,'chapathi':30}
-userno=0
 orderedfood=[]
 orderedquantity=[]
 promocode="SAYUR100"
@@ -20,7 +19,8 @@ def addNewItems():
 
         foodItemsCost[name] = cost
 def foodMenu():
-    print(foodItemsCost)
+    for key,value in foodItemsCost.items():
+     print(f"{key} : ${value}")
 def orderFood():
     while(1):
         option=input("you want to order food(y/n):")
@@ -88,8 +88,8 @@ def main():
         else:
             print("Invalid choice.")
 
-if __name__ == "__main__":
-    main()
+
+main()
 
 
     
