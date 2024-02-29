@@ -1,5 +1,4 @@
-#import the collection package
-import collections
+
 #example hardcode value
 name = ["rajesh", "siva", "malkkar", "nithish", "vasanth", "kaveri"]
 mark = [55, 45, 65, 34, 78, 66]

@@ -17,7 +17,7 @@ def departmentData():
             mark = int(mark_int)
             marks.append(mark)
         
-        departments.append({'num_students': num_students, 'marks': marks})
+        departments.append(f"num_students: {num_students}, marks: {marks}")
     return departments
 
 departments = departmentData()

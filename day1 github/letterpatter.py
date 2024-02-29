@@ -1,7 +1,7 @@
 #previous contain the previous printed letters
 previous=""
 #assigned the "a" to letter
-letter='a'
+letter= 'a'
 #print the letter until g
 while(letter<='g'):
     #concat the previous front and back of the letter 
@@ -11,3 +11,4 @@ while(letter<='g'):
     print(previous)
     
     
+

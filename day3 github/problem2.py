@@ -1,36 +1,47 @@
+try:
+    with open("D:\sayur day1\day3 github\input.txt", "r") as file:
+        sentence = file.read()
+        print(sentence)
+except IOError:
+    print("Error: doesn't have a file" )
 
-def check(words, middle_letter):
-    return middle_letter in words
+# Split the sentence into words and convert to lowercase
+words = sentence.lower().split(" ")
 
-def targetedWord():
-    try:
-        with open('input.txt', 'r') as file:
-            sentence = file.readlines()
-    except FileNotFoundError:
-        print("File not found.")
-        return
+# Target word we want to count
+targetWord = "the"
 
-    words = sentence.lower().split()
-    target_word = "the"
-    check_sentence = []
-    count = 0
+# Initialize count and loop variable
+count = 0
+i = 0
+
+# Loop through the words
+while i < len(words):
+    # Initialize a variable to track the word before "the"
+    ignored_word = ""
     
-    i = 0
-    while i < len(words):
-        if words[i] == target_word:
-            check_sentence.append(words[i])
-            
-            for j in range(i + 1, len(words)):
-                check_sentence.append(words[j])
-                
-                if words[j] == target_word:
-                    if not check(check_sentence, "a"):
-                        count += 1
-                    
-                    check_sentence.clear()
-                    i = j - 1
+    # Check if the current word is "the"
+    if words[i] == "the":
+        # If "the" is found, start looking for the next occurrence
+        for j in range(i + 1, len(words)):
+            # If "a" is found, mark it as ignored
+            if words[j] == "a":
+                ignored_word = "a"
+
+            # If the target word is found
+            if targetWord == words[j]:
+                # If it's not ignored, increase count and exit the loop
+                if ignored_word != "a":
+                    count += 1
                     break
-        i += 1
-    
-    print("Count:", count)
-targetedWord()
+                else:
+                    break  # If ignored, exit loop without counting
+
+            # Update i to the index of the last occurrence of "the"
+            i = j - 1
+     
+    # Move to the next word
+    i += 1
+
+# Print the final count
+print(count)
