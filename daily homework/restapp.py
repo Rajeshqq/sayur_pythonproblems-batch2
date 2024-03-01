@@ -15,7 +15,7 @@ def addNewItems():
 
     for i in range(itemsCount):
         name = input("Enter food name: ")
-        cost = input("Enter food cost: ")
+        cost = int(input("Enter food cost: "))
 
         foodItemsCost[name] = cost
 def foodMenu():
