@@ -1,6 +1,5 @@
 def removeDuplicate():
     input1=input("enter the string : ")
-    words=input1.lower().split(" ")
     for i in range(0,2):
         if(i==0):
              print("with case sensitive :")
