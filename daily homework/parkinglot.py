@@ -4,7 +4,7 @@ parking_lot = []  # Global parking lot variable
 
 def initialize_parking(row, column):
     global parking_lot  # Access the global variable
-    parking_lot = [[0 for _ in range(column)] for _ in range(row)]
+    parking_lot = [[0 for i in range(column)] for j in range(row)]
     return parking_lot
 
 def print_parking_lot():
