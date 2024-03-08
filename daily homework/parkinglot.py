@@ -2,8 +2,13 @@ parkedid = []
 cost = 0
 
 def initialize_parking(row, column):
+<<<<<<< HEAD
     global parking_lot  
     parking_lot = [[0 for _ in range(column)] for _ in range(row)]
+=======
+    global parking_lot  # Access the global variable
+    parking_lot = [[0 for i in range(column)] for j in range(row)]
+>>>>>>> de7221cf24394e9cb228253e635f8c583cd2cbff
     return parking_lot
 
 def print_parking_lot():
