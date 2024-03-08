@@ -1,21 +1,20 @@
 parkedid = []
 cost = 0
-parking_lot = []  # Global parking lot variable
 
 def initialize_parking(row, column):
-    global parking_lot  # Access the global variable
+    global parking_lot  
     parking_lot = [[0 for _ in range(column)] for _ in range(row)]
     return parking_lot
 
 def print_parking_lot():
-    global parking_lot  # Access the global variable
+    global parking_lot  
     for row in parking_lot:
         for spot in row:
             print(spot, end=" ")
         print()
 
 def enter_parking():
-    global parking_lot  # Access the global variable
+    global parking_lot 
     for i in range(len(parking_lot)):
         for j in range(len(parking_lot[0])):
             if parking_lot[i][j] == 0:
@@ -89,6 +88,13 @@ def user_interface():
         else:
             print("Invalid choice. Please enter again.")
 
-
-admin_interface()
-user_interface()
+while(True):
+    interfaceinput=int(input(("enter interface you want to go 1.admin ,2.user,3.exit : ")))
+    if(interfaceinput==1):  
+        admin_interface()
+    elif(interfaceinput==2):
+        user_interface()
+    elif(interfaceinput==3):
+        break
+    else:
+        print("Invalid input")
