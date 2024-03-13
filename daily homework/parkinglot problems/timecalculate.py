@@ -1,13 +1,13 @@
-def parse_time(time_str):
-    hours, minutes = map(int, time_str.split(':'))
+def time(timestr):
+    hours, minutes = map(int, timestr.split(':'))
     return hours, minutes
 
 def payment():
-    entry_time_str = input("Enter the entry time (HH:MM): ")
-    exit_time_str = input("Enter the exit time (HH:MM): ")
+    entry_time_str = input("Enter the entry time : ")
+    exit_time_str = input("Enter the exit time : ")
 
-    entry_hours, entry_minutes = parse_time(entry_time_str)
-    exit_hours, exit_minutes = parse_time(exit_time_str)
+    entry_hours, entry_minutes = time(entry_time_str)
+    exit_hours, exit_minutes = time(exit_time_str)
 
     total_minutes = (exit_hours - entry_hours) * 60 + (exit_minutes - entry_minutes)
     total_hrs = total_minutes // 60
@@ -34,4 +34,4 @@ def payment():
 
     return amount
 
-print(payment())
+print("you need to pay : " ,payment())
