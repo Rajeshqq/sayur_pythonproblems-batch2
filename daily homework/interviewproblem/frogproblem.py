@@ -19,21 +19,22 @@
 frog= [1,2,5,7,3,2,2]
 #frog=[1,2,3,4,5]
 alive_frog=[0]
-for i in range(1,len(frog)):
+for i in range(0,len(frog)):
     if(frog[i]>frog[i-1]):
         if(frog[i]>alive_frog[len(alive_frog)-1] ):
             alive_frog[len(alive_frog)-1]=frog[i]
     else:
         if(alive_frog[0]==0):
             alive_frog[0]=frog[i]
-        alive_frog.append(frog[i])
+        else:
+             alive_frog.append(frog[i])
 print(alive_frog)
 
 #bonus problem
 frog= [1,2,5,7,3,2,2]
 #frog=[1,2,3,4,5]
 alive_frog=[0]
-for i in range(1,len(frog)):
+for i in range(0,len(frog)):
     if(frog[i]>frog[i-1]):
         frog[i]+=frog[i-1]
         if(frog[i]>alive_frog[len(alive_frog)-1]):
@@ -41,6 +42,7 @@ for i in range(1,len(frog)):
     else:
         if(alive_frog[0]==0):
             alive_frog[0]=frog[i-1]
-        alive_frog.append(frog[i])
+        else:
+            alive_frog.append(frog[i])
 print(alive_frog)
 
